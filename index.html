@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <head>
+        <title>Task</title>
+    </head>
+    <style>
+        #main{
+            display: inline-block;
+            border: 1px solid black;
+            margin-top: 20px;
+            padding: 20px;
+            outline: black;
+            cursor:pointer
+        }
+    </style>
+<body>
+    <div id="parentId">
+        <div id="main">
+            1
+        </div>
+        <div id="main">
+            2
+        </div>
+        <div id="main">
+            3
+        </div><br/>
+        <div id="main">
+            4
+        </div>
+        <div id="main">
+            5
+        </div>
+        <div id="main">
+            6
+        </div><br/>
+        <div id="main">
+            7
+        </div>
+        <div id="main">
+            8
+        </div>
+        <div id="main">
+            9
+        </div>
+    </div>
+    
+</body>
+<script>
+       const parentId = document.querySelector('#parentId')
+        parentId.addEventListener('click', getData,false)
+        parentId.addEventListener('mouseover', clearData,false)
+
+        function getData(event){
+            if(event.target !== event.currentTarget){
+                var clickedItem = event.target.id
+                event.target.style.backgroundColor = 'green';
+            }
+        }
+        
+        function clearData(event){
+            if(event.target !== event.currentTarget){
+                var clickedItem = event.target.id
+                event.target.style.backgroundColor = 'white';
+            }
+        }
+
+</script>
+</html>
